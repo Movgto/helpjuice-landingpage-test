@@ -28,6 +28,7 @@ const closeMenu = () => {
     menu.style.zIndex = -100;
 }
 
+closeMenu();
 
 // Automatically close the menu when the window resizes to prevent displaying the menu on larger screens
 window.addEventListener('resize', e => {
