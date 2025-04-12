@@ -5,3 +5,6 @@ This is a basic HTML/CSS project for the Helpjuice frontend test, a landing page
 ## Usage
 
 -  Open `index.html` in your web browser to view the project
+
+## Live site
+See this project live (here)[https://helpjuice-maro-landingpage-test.onrender.com]
