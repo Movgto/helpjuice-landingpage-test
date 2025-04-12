@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Project</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="js/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-white antialiased w-full min-h-screen flex flex-col px-6">
+    <header class="w-full mt-0 lg:mt-[49.87px] flex flex-col" id="header">
+        <!-- Header for mobile device screens -->
+        <div class="flex lg:hidden w-full py-5 justify-between items-center max-w-7xl self-center">
+            <div>
+                <img class="w-[140px] object-contain" src="assets/logos/wizardshot_logo.svg" />
+            </div>
+
+            <div role="button" aria-label="menu-button" class="relative hover:cursor-pointer rounded-full hover:bg-slate-500/20 size-10 transition-colors" id="menu-button">
+                <img src="assets/icons/menu-icon.svg" class="size-7 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2" alt="Menu icon" id="menu-icon" />
+            </div>
+        </div>
+
+        <!-- Larger screens header -->
+        <div class="hidden lg:flex w-full justify-between items-center max-w-7xl self-center">
+            <div>
+                <img class="w-[140px] object-contain" src="assets/logos/wizardshot_logo.svg" />
+            </div>
+            <nav>
+                <ul class="flex justify-center open-sans">
+                    <li class="font-semibold text-base text-[#4F4F4F] px-3 py-[6px] underline">Home</li>
+                    <li class="text-base text-[#00000099] px-3 py-[6px] hover:cursor-pointer">Features</li>
+                    <li class="text-base text-[#00000099] px-3 py-[6px] hover:cursor-pointer">About</li>
+                    <li class="text-base text-[#00000099] px-3 py-[6px] hover:cursor-pointer">Help Center & Community
+                    </li>
+                </ul>
+            </nav>
+            <div class="flex gap-[14px] items-center">
+                <p class="font-normal text-base text-[#666666] open-sans">Login</p>
+                <button
+                    class="flex relative flex-nowrap items-center bg-[#18181C] rounded-lg gap-2 py-2 px-4 hover:cursor-pointer">
+                    <img class="size-[19px] object-contain" src="assets/icons/chrome_icon.svg" />
+                    <p class="font-bold text-white text-sm mulish">Install Wizardshot</p>
+                    <p
+                        class="w-full pb-[2px] alpha-tapes text-center leading-[160%] absolute left-1/2 -translate-x-1/2 -translate-y-full">
+                        100% free, forever 🤑</p>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu panel for mobile devices -->
+    <side class="absolute left-0 w-full border-t-2 border-[#E6E6E6] pt-[29px]
+                transition-transform duration-200 ease-out bg-white h-full z-50 hidden" id="menu">
+        <ul class="flex flex-col gap-6 text-[#00000099] pb-[23.4px] px-[24.5px]
+                    border-b border-[#E6E6E6] open-sans">
+            <li class="py-[6px]">
+                <a class="underline font-semibold text-[#4F4F4F]" href="">Home</a>
+            </li>
+            <li class="py-[6px]">
+                <a class="text-[#00000099]" href="">Features</a>
+            </li>
+            <li class="py-[6px]">
+                <a class="text-[#00000099]" href="">About</a>
+            </li>
+            <li class="py-[6px]">
+                <a class="text-[#00000099]" href="">Help Center & Community</a>
+            </li>
+            <li class="py-[6px]">
+                <a class="text-[#00000099]" href="">Login</a>
+            </li>
+        </ul>
+
+        <button
+            class="flex flex-nowrap items-center bg-[#18181C] rounded-lg gap-2 py-2 px-4 hover:cursor-pointer hover:opacity-80 transition-opacity mx-auto mt-[29px]">
+            <img class="size-[19px] object-contain" src="assets/icons/chrome_icon.svg" />
+            <p class="font-bold text-white text-sm mulish">Install Wizardshot</p>
+        </button>
+        <p class="alpha-tapes text-center leading-[160%]">100% free, forever 🤑</p>
+    </side>
+
+    <h1 class="mt-[64.14px] font-extrabold text-[40px] jakarta lg:text-[58px] leading-[120%] text-center">Your Magic
+        Wand for
+        Instant
+        Documentation</h1>
+    <h2 class="uppercase mt-4 lg:mt-[10px] open-sans font-semibold leading-[130%] text-[#00000099] text-center">Turn ANY
+        process
+        into a
+        simple step-by step Guide
+    </h2>
+
+    <button class="w-full flex gap-1 max-w-[195px] bg-[#18181C] pl-6 pr-[20px] py-2 rounded-lg self-center mt-4
+                    hover:cursor-pointer hover:opacity-80 transition-opacity">
+        <p class="font-bold mulish text-[14px] leading-[160%] text-white">Install Wizardshot</p>
+        <img class="size-6" src="assets/icons/arrow-right.svg" />
+    </button>
+
+    <div class="w-full relative flex justify-center">
+        <img src="assets/images/lines.svg" alt="lines" class="w-full absolute top-0 -right-5" />
+        <div
+            class="relative mt-24 lg:mt-[124.87px] max-w-[1039.67px] w-full aspect-[1039.67/596.75] self-center rounded-lg bg-linear-to-b from-[#AB96F8] to-[#FF99D0] p-[10px]">
+            <img src="assets/images/video.png" class="size-full" alt="tutorial video" />
+            <img class="absolute left-0 top-0 -translate-y-5 -translate-x-3" src="assets/icons/arrow-icon.svg"
+                alt="arrow" />
+            <p class="absolute top-0 left-4 -translate-y-[100%] mulish-italic font-bold leading-[140%]">It only takes 3
+                clicks to<br>publish your first tutorial</p>
+        </div>
+    </div>
+
+    <div class="relative mt-[89.15px] bg-white w-full max-w-[1060.40px] self-center">
+        <div class="p-[10px] jakarta">
+            <h2 class="font-extrabold text-[32px] lg:text-[40px] leading-[110%] lg:leading-[120%] text-center">
+                Say <span class="underline">Goodbye</span> <span class="underline">To Writing Docs</span>, and
+                Hello<br>To Wizardshot Doing it for YOU.
+            </h2>
+        </div>
+        <div class="mt-[12.21px] flex flex-col gap-8 items-center lg:flex-row lg:justify-between open-sans">
+            <div class="flex flex-col gap-2 max-w-[296px] w-full relative">
+                <div
+                    class="absolute w-5/6 h-1/2 top-1/2 -translate-y-[65%] left-1/2 -translate-1/2 brightness-150 blur-3xl bg-linear-[90deg,#44FF9A,#44B0FF,#8B44FF,#FF6644,#EBFF70]">
+                </div>
+                <img src="assets/images/features_01.png" class="z-20" />
+                <div class="flex flex-col gap-2 z-20">
+                    <h3 class="font-semibold text-lg leading-[140%] text-[#363636]">1. Click Capture</h3>
+                    <p class="font-normal text-sm text-[#0000008F]">Once you install the Chrome extension, fire it up,
+                        and click “Capture”.</p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-2 max-w-[296px] w-full relative">
+                <div
+                    class="absolute w-5/6 h-1/2 top-1/2 -translate-y-[65%] left-1/2 -translate-1/2 brightness-150 blur-3xl bg-linear-[90deg,#44FF9A,#44B0FF,#8B44FF,#FF6644,#EBFF70] z-0">
+                </div>
+                <div class="relative z-50 lg:h-[234px]">
+                    <img src="assets/images/features_02.png" class="z-50" />
+                    <!-- Connection lines between cards -->
+                    <div
+                        class="absolute bottom-2 w-[120%] left-1/2 -translate-x-1/2 border-t border-[#AB96F8] border-dashed overflow-visible hidden lg:block">
+                        <div class="absolute left-0 bottom-0 h-28 border-dashed border-l border-[#AB96F8]">
+                            <div class="absolute top-0 right-0 w-9 border-t border-dashed border-[#AB96F8]">
+                                <div
+                                    class="absolute left-0 -translate-x-1/2 -translate-y-1/2 rounded-full size-2 z-10 bg-white border border-[#AB96F8]">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute right-0 bottom-0 h-28 border-dashed border-l border-[#AB96F8]">
+                            <div class="absolute top-0 left-0 w-9 border-t border-dashed border-[#AB96F8]">
+                                <div
+                                    class="absolute right-0 translate-x-1/2 -translate-y-1/2 rounded-full size-2 z-10 bg-white border border-[#AB96F8]">
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full size-2 z-10 bg-white border border-[#AB96F8]">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2 z-20">
+                    <h3 class="font-semibold text-lg leading-[140%] text-[#363636]">2. Perform Your Actions</h3>
+                    <p class="font-normal text-sm text-[#0000008F]">Once capturing, Wizardshot carefully monitors what
+                        you do to understand how to document it..</p>
+                </div>
+
+
+            </div>
+            <div class="flex flex-col gap-2 max-w-[296px] w-full relative">
+                <div
+                    class="absolute w-5/6 h-1/2 top-1/2 -translate-y-[65%] left-1/2 -translate-1/2 brightness-150 blur-3xl bg-linear-[90deg,#44FF9A,#44B0FF,#8B44FF,#FF6644,#EBFF70]">
+                </div>
+                <img src="assets/images/features_03.png" class="z-20" />
+                <div class="flex flex-col gap-2 z-20">
+                    <h3 class="font-semibold text-lg leading-[140%] text-[#363636]"> 3. ✅ Done. Article Written</h3>
+                    <p class="font-normal text-sm text-[#0000008F]">Once you install the Chrome extension, fire it up,
+                        and click “Capture”.</p>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="absolute right-0 -bottom-[100px] lg:-bottom-[75px] lg:right-[256px] translate-y-1/2 -rotate-[15deg]  flex p-1 rounded-md bg-linear-[45deg,#3D0669,#174798]">
+            <img src="assets/images/portrait.png" alt="portrait"
+                class="size-[25px] object-cover rounded-md overflow-clip" />
+
+            <div
+                class="absolute size-3 bottom-0 left-0 translate-y-1/4 -translate-x-1/4 bg-linear-[45deg,#3D0669,#174798] rounded-full">
+                <img src="assets/icons/play-icon.svg" alt="play icon"
+                    class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-1" />
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-[53.5px] lg:mt-[19.08px] uppercase text-center font-bold text-[28px] jakarta">
+        <p class="underline leading-[140%]">+32 more features</p>
+        <p class="text-[18px] leading-5">including a kb integration</p>
+    </div>
+
+    <div class="mt-7 lg:mt-[155.91px] flex flex-col items-center relative">
+        <div class="flex relative w-full max-w-[692px] jakarta">
+            <img src="assets/icons/gradient-arrow.svg" alt="gradient color arrow"
+                class="absolute top-7 -right-12 z-20 lg:block hidden" />
+            <img src="assets/icons/gradient-arrow-mobile.svg" alt="gradient color arrow"
+                class="absolute top-7 right-4 z-20 block lg:hidden" />
+            <div class="relative opacity-60 flex gap-6 w-full justify-center">
+                <div
+                    class="absolute w-[97%] h-[53%] top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-linear-[90deg,#F0FBB9,#FBB3A0,#BFA2FD,#A4D0FC,#9FE9E2,#9FFACE]">
+                </div>
+                <div class="flex flex-nowrap items-center gap-1 z-20">
+                    <h3 class="text-[21px] lg:text-[40px] font-medium text-[#18181B] underline">Free</h3>
+                    <p class="text-[8px] lg:text-base">
+                        <span>Free</span><br>
+                        <span>Forever</span><br>
+                    </p>
+                </div>
+                <div class="flex flex-nowrap items-center gap-1 z-20">
+                    <h3 class="text-[21px] lg:text-[40px] font-medium text-[#18181B] underline">Unlimited</h3>
+                    <p class="text-[8px] lg:text-base">
+                        <span>Tutorial</span><br>
+                        <span>Creation</span><br>
+                    </p>
+                </div>
+                <div class="flex flex-nowrap items-center gap-1 z-20">
+                    <h3 class="text-[21px] lg:text-[40px] font-medium text-[#18181B] underline">Powerful</h3>
+                    <p class="text-[8px] lg:text-base">
+                        <span>Editor &</span><br>
+                        <span>Integrations</span><br>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col items-center mt-6 w-full max-w-[864px] border-8 border-black rounded-lg">
+            <p class="text-center font-extrabold jakarta text-[32px] lg:text-[40px] leading-[140%] mt-9 lg:mt-[44px]">
+                Create A Detailed Tutorial<br>in Less than 3 clicks
+            </p>
+
+            <div class="relative px-7 mt-7">
+                <button class="flex relative flex-nowrap justify-center items-center bg-[#18181C]
+                rounded-lg gap-2 py-2 pl-6 pr-5 hover:cursor-pointer w-full max-w-[312.8px]
+                lg:max-w-[467.81px] h-[93.48px] group">
+                    <div
+                        class="absolute -inset-1 z-[-1] transition-all duration-500 ease-out blur-lg opacity-60 group-hover:opacity-90 group-hover:blur-xl bg-linear-[90deg,#44FF9A,#44B0FF,#8B44FF,#FF6644,#EBFF70]">
+                    </div>
+                    <img class="size-8 object-contain z-10" src="assets/icons/chrome_icon.svg" />
+                    <p class="font-normal text-white text-2xl mulish lg:text-[32px] leading-[160%] z-10">Install
+                        Wizardshot
+                    </p>
+                </button>
+            </div>
+
+            <div class="mt-[55.7px] lg:mt-10 mb-12 lg:mb-16 flex flex-col">
+                <p class="font-extrabold text-sm lg:text-[28px] jakarta text-[#212020] text-center">
+                    “Has helped us write help docs 100x faster”<br>
+                    <span class="font-normal text-[#212020]">– Dany River, Cartier Informatie</span>
+                </p>
+
+                <div class="flex gap-1 self-center mt-2">
+                    <img class="w-6 lg:w-5 object-contain" src="assets/icons/star_icon.svg" />
+                    <img class="w-6 lg:w-5 object-contain" src="assets/icons/star_icon.svg" />
+                    <img class="w-6 lg:w-5 object-contain" src="assets/icons/star_icon.svg" />
+                    <img class="w-6 lg:w-5 object-contain" src="assets/icons/star_icon.svg" />
+                    <img class="w-6 lg:w-5 object-contain" src="assets/icons/star_icon.svg" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="mt-14 lg:mt-20 w-full max-w-[800px] p-6 self-center">
+        <h2 class="font-extrabold text-[32px] jakarta text-center">Common Questions</h2>
+
+        <div class="flex flex-col gap-4 mt-4 inter">
+            <div class="flex flex-col pb-4 inset-shadow-[0px_-1px_0px_0px_rgb(226,232,240)]">
+                <div class="py-4 flex items-center justify-between">
+                    <h3 class="font-medium text-base text-[#0F172A]">What is Wizardshot</h3>
+                    <div class="size-4">
+                        <img src="assets/icons/chevron_up.svg" />
+                    </div>
+                </div>
+
+                <p class="font-normal text-sm text-[#0F172A]">Wizardshot is a web app & chrome extension . that allows
+                    you to create step-by-step tutorials simply by capturing your screen.</p>
+            </div>
+
+            <div class="flex flex-col pb-4 inset-shadow-[0px_-1px_0px_0px_rgb(226,232,240)]">
+                <div class="py-4 flex items-center justify-between">
+                    <h3 class="font-medium text-base text-[#0F172A]">How is Wizardshot Free?</h3>
+                    <div class="size-4">
+                        <img src="assets/icons/chevron_up.svg" />
+                    </div>
+                </div>
+
+                <p class="font-normal text-sm text-[#0F172A]">
+                    The costs to run a service is really inexpensive as most
+                    of the processing happens in the Chrome extension. <br><br>
+
+                    Really - all that we have to pay for is <span class="underline">super-secure hosting</span>, <span
+                        class="underline">awesome 24/7
+                        support</span> and that’s it. <br><br>
+
+                    <span class="font-semibold">
+                        We built Wizardshot as a stand-alone product with a deep <span class="underline">Helpjuice
+                            Knowledge Base</span>
+                        integration.
+                    </span>
+                </p>
+            </div>
+
+            <div class="flex flex-col pb-4 inset-shadow-[0px_-1px_0px_0px_rgb(226,232,240)]">
+                <div class="py-4 flex items-center justify-between">
+                    <h3 class="font-medium text-base text-[#0F172A]">Is my data secure</h3>
+                    <div class="size-4">
+                        <img src="assets/icons/chevron_down.svg" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col pb-4 mulish">
+                <div class="py-4 flex flex-col lg:flex-row items-center gap-4 lg:gap-0 lg:justify-between">
+                    <h3 class="font-medium text-sm lg:text-base text-[#0F172A]">Curious To Learn More?</h3>
+                    <button class="bg-[#03132E] rounded-lg pl-6 pr-5 py-2 font-bold text-sm
+                                text-white leading-[160%] hover:cursor-pointer hover:opacity-80 transition-opacity">
+                        Visit Help & Community Center
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div
+        class="flex relative flex-col lg:flex-row bg-black rounded-lg pl-4 lg:pl-12 pr-4 lg:pr-24 py-8 w-full max-w-[1136px] mt-[52px] lg:mt-16 justify-between items-center self-center">
+        <div class="flex flex-col gap-[10px] mulish">
+            <h3 class="text-[#F9FAFB] font-medium text-3xl">Create Tutorials in 3 Clicks.</h3>
+            <p class="font-normal text-sm text-[#F9FAFB] opacity-60">With WizardShot, You Click Capture, And We’ll
+                Capture What’s Happening on Your Screen And Turn It Into A Tutorial.</p>
+        </div>
+
+        <button class="flex items-center font-medium text-xl text-white leading-[140%] underline shadow
+                    hover:cursor-pointer relative mt-6 lg:mt-0 self-end lg:self-auto">
+            <div class="absolute inset-0 blur-2xl bg-linear-[90deg,#44FF9A,#44B0FF,#8B44FF,#FF6644,#EBFF70]"></div>
+            <p class="inter">Try Wizardshot</p>
+            <img class="ml-4" src="assets/icons/arrow-right.svg" />
+        </button>
+
+        <p class="absolute top-0 right-0 -translate-y-full alpha-tapes">100% free, forever 🤑</p>
+    </div>
+
+    <footer class="flex flex-col w-full max-w-7xl self-center mx-6">
+        <div class="flex flex-col lg:flex-row w-full">
+            <div class="mt-12 lg:mt-[90px] w-full lg:w-auto lg:ml-20">
+                <div>
+                    <img class="w-[180px] lg:w-[245px] object-contain" src="assets/logos/wizardshot_logo.svg" />
+                </div>
+                <p class="mt-[18px] font-semibold text-lg leading-[130%] text-[#0D0D0D] mulish">Turn complex process
+                    into
+                    a<br>simple step-by step Guide</p>
+
+                <div class="flex flex-col w-[132px] border-[3px] border-[#0D0D0D] mt-[29.36px]">
+                    <div class="flex text-[#3A3A3A] font-bold w-full">
+                        <div class="flex flex-col items-center justify-center border-r-[3px] py-1 px-3">
+                            <p class="text-2xl leading-none">12</p>
+                            <p class="text-[8px] leading-3">YEARS</p>
+                        </div>
+                        <div class="flex flex-col items-center p-1 text-[8px] flex-1">
+                            <p>BUILT BY</p>
+                            <img class="size-5" src="assets/logos/helpjuice_logo.svg" />
+                            <p>HELPJUICE</p>
+                        </div>
+                    </div>
+
+                    <div class="border-t-[3px] text-[#3A3A3A] text-[6px] text-center font-medium py-1">
+                        <p>#1 Rated Knowledge Base Software</p>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="flex lg:ml-16 mt-12 lg:mt-[90px] lg:px-6 lg:p-0 justify-between lg:justify-normal gap-8 lg:gap-24 mulish">
+                <div class="flex flex-col text-[#0D0D0D]">
+                    <h3 class="font-bold text-[22px] leading-[130%]">Learn more</h3>
+
+                    <ul class="flex flex-col font-semibold text-[18px] leading-[130%] mt-3">
+                        <li><a href="">Wizardshot</a></li>
+                        <li><a href="">Community Page</a></li>
+                        <li><a href="">Help Center</a></li>
+                        <li><a href="">Security Information</a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col text-[#0D0D0D]">
+                    <h3 class="font-bold text-[22px] leading-[130%]">Company</h3>
+
+                    <ul class="flex flex-col font-semibold text-[18px] leading-[130%] mt-3">
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Status Page</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="flex-1 flex flex-col lg:flex-col-reverse items-start w-full lg:flex-1 lg:items-end lg:mr-32 mt-12 lg:justify-end lg:mt-[40.5px] mulish">
+                <div class="flex flex-col lg:items-end">
+                    <div class="flex gap-4 mt-2 w-full lg:justify-end">
+                        <img class="size-9" src="assets/icons/tiktok-icon.svg" />
+                        <img class="size-9" src="assets/icons/insta-icon.svg" />
+                    </div>
+                    <div class="flex mt-6 gap-6 font-bold text-[22px]">
+                        <a>Log in</a>
+                        <a>Sign Up</a>
+                    </div>
+                </div>
+
+                <div
+                    class="flex flex-col self-center lg:self-end text-center lg:text-end p-2 filter-[grayscale(100%)] gap-1 pt-[33px] mt-12 lg:mt-0">
+                    <a class="font-medium text-[14px] leading-[140%] text-[#0D0D0D]">📞 +1 (833) 387 3877</a>
+                    <a class="font-medium text-[14px] leading-[140%] text-[#0D0D0D]">✉️ success@wizardshot.com</a>
+                </div>
+            </div>
+        </div>
+
+        <p
+            class="text-center text-[#98A2B3] lg:text-[#0D0D0D] mt-8 lg:mt-16 mb-12 lg:mb-11 font-medium text-xs mulish leading-[130%]">
+            © 2024 Wizardshot – All
+            rights reserved.</p>
+    </footer>
+</body>
+
+</html>
